@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tế bào nhân thực</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">Tế bào nhân thực</div>
+    <button id="editBtn" class="edit-btn" onclick="toggleEdit()">✏️ Edit</button>
+  </header>
+
+  <main id="app">
+    <!-- HOME VIEW -->
+    <section id="home" class="view active">
+      <div class="hero">
+        <div class="hero-left">
+          <h1 contenteditable="false">Tế bào nhân thực</h1>
+          <p class="subtitle" contenteditable="false">Đặc điểm chung · Cấu tạo · So sánh</p>
+        </div>
+        <div class="hero-right">
+          <img src="images/hero.png" alt="Tế bào nhân thực 3D" class="hero-img">
+        </div>
+      </div>
+
+      <div class="content-wrap">
+        <section class="section" id="section-i">
+          <h2 contenteditable="false">I. Đặc điểm chung của tế bào nhân thực</h2>
+          <ul contenteditable="false">
+            <li>Kích thước lớn, cấu tạo phức tạp.</li>
+            <li>Có nhân chính thức được bao bọc bởi màng nhân.</li>
+            <li>Có tế bào chất, hệ thống nội màng và nhiều bào quan có màng bao bọc.</li>
+            <li>Gồm tế bào động vật, thực vật và nấm.</li>
+          </ul>
+        </section>
+
+        <section class="section cells-section">
+          <h2 contenteditable="false">Mô hình tế bào</h2>
+          <div class="cells-grid">
+            <div class="cell-card">
+              <h3>Tế bào động vật</h3>
+              <div class="cell-img-wrap">
+                <img src="images/animal-cell.png" alt="Tế bào động vật" id="animalImg">
+              </div>
+              <div class="organelle-list" id="animalList">
+                <button data-org="nhan">Nhân</button>
+                <button data-org="mang-nhan">Màng nhân</button>
+                <button data-org="luoi-noi-chat-hat">Lưới nội chất hạt</button>
+                <button data-org="luoi-noi-chat-tron">Lưới nội chất trơn</button>
+                <button data-org="ribosome">Ribosome</button>
+                <button data-org="golgi">Bộ máy Golgi</button>
+                <button data-org="lysosome">Lysosome</button>
+                <button data-org="peroxisome">Peroxysome</button>
+                <button data-org="ti-the">Ti thể</button>
+                <button data-org="khong-bao">Không bào</button>
+                <button data-org="te-bao-chat">Tế bào chất</button>
+                <button data-org="mang-te-bao">Màng tế bào</button>
+              </div>
+            </div>
+            <div class="cell-card">
+              <h3>Tế bào thực vật</h3>
+              <div class="cell-img-wrap">
+                <img src="images/plant-cell.png" alt="Tế bào thực vật" id="plantImg">
+              </div>
+              <div class="organelle-list" id="plantList">
+                <button data-org="nhan">Nhân</button>
+                <button data-org="nhan-con">Nhân con</button>
+                <button data-org="luoi-noi-chat">Lưới nội chất</button>
+                <button data-org="golgi">Bộ máy Golgi</button>
+                <button data-org="luc-lap">Lục lạp</button>
+                <button data-org="khong-bao">Không bào</button>
+                <button data-org="ti-the">Ty thể</button>
+                <button data-org="peroxisome">Peroxisome</button>
+                <button data-org="ribosome">Ribosome</button>
+                <button data-org="lap-bot">Lạp bột</button>
+                <button data-org="mang-sinh-chat">Màng sinh chất</button>
+                <button data-org="thanh-te-bao">Thành tế bào</button>
+                <button data-org="te-bao-chat">Tế bào chất</button>
+              </div>
+            </div>
+          </div>
+          <p class="hint">Nhấp vào tên bộ phận để xem cấu tạo & chức năng chi tiết. Nhấp vào hình ảnh sẽ phóng to nhẹ.</p>
+        </section>
+
+        <section class="section" id="section-ii">
+          <h2 contenteditable="false">II. So sánh tế bào nhân sơ và tế bào nhân thực</h2>
+          <h3 contenteditable="false">1. Điểm giống nhau</h3>
+          <ul contenteditable="false">
+            <li><strong>Thành phần cơ bản</strong>: Đều được cấu tạo từ 3 thành phần chính gồm màng sinh chất, tế bào chất và vật liệu di truyền (ADN).</li>
+            <li><strong>Chức năng sống</strong>: Đều thực hiện các quá trình cơ bản như trao đổi chất, sinh trưởng, phát triển và sinh sản.</li>
+          </ul>
+          <h3 contenteditable="false">2. Điểm khác nhau chi tiết</h3>
+          <div class="table-wrap">
+            <table contenteditable="false">
+              <thead>
+                <tr>
+                  <th>Đặc điểm</th>
+                  <th>Tế bào nhân sơ</th>
+                  <th>Tế bào nhân thực</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Kích thước</td><td>Nhỏ khoảng 1 – 5 µm</td><td>Lớn hơn rất nhiều khoảng 10 – 50 µm</td></tr>
+                <tr><td>Cấu tạo nhân</td><td>Chưa có màng nhân hoàn chỉnh (chỉ là vùng nhân)</td><td>Có màng nhân hoàn chỉnh bao bọc nhân</td></tr>
+                <tr><td>Vật liệu di truyền (ADN)</td><td>ADN dạng vòng kép, nằm tự do ở vùng nhân, không liên kết với protein histon</td><td>ADN kết hợp với protein tạo thành nhiễm sắc thể (NST) dạng thẳng</td></tr>
+                <tr><td>Hệ thống nội màng</td><td>Không có hệ thống nội màng</td><td>Có hệ thống nội màng chia tế bào chất thành các xoang và khoang riêng biệt</td></tr>
+                <tr><td>Bào quan có màng</td><td>Không có các bào quan có màng bao bọc</td><td>Có nhiều bào quan có màng như ti thể, lục lạp, lưới nội chất, bộ máy Golgi...</td></tr>
+                <tr><td>Ribosome</td><td>Chỉ có ribosome kích thước nhỏ (70S)</td><td>Có ribosome kích thước lớn hơn (80S) và cả ribosome trong ti thể, lục lạp</td></tr>
+                <tr><td>Thành tế bào</td><td>Thường cấu tạo bằng peptidoglycan</td><td>Xenlulozơ (ở thực vật), kitin (ở nấm), hoặc không có (ở động vật)</td></tr>
+                <tr><td>Khung xương tế bào</td><td>Không có hoặc rất thô sơ</td><td>Có hệ thống khung xương tế bào phát triển</td></tr>
+                <tr><td>Hình thức phân bào</td><td>Phân đôi trực tiếp, không có nguyên phân hay giảm phân</td><td>Phân bào phức tạp qua nguyên phân hoặc giảm phân</td></tr>
+                <tr><td>Đại diện sinh vật</td><td>Vi khuẩn, vi khuẩn cổ</td><td>Nguyên sinh vật, nấm, thực vật và động vật</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="compare-imgs">
+            <figure>
+              <img src="images/prokaryote.png" alt="Tế bào nhân sơ">
+              <figcaption>Tế bào nhân sơ</figcaption>
+            </figure>
+            <figure>
+              <img src="images/animal-cell.png" alt="Tế bào nhân thực (động vật)">
+              <figcaption>Tế bào nhân thực (động vật)</figcaption>
+            </figure>
+            <figure>
+              <img src="images/plant-cell.png" alt="Tế bào nhân thực (thực vật)">
+              <figcaption>Tế bào nhân thực (thực vật)</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="section-iii">
+          <h2 contenteditable="false">III. So sánh tế bào thực vật và tế bào động vật</h2>
+          <h3 contenteditable="false">Điểm giống nhau</h3>
+          <ul contenteditable="false">
+            <li><strong>Loại tế bào</strong>: Đều là tế bào nhân thực (có màng nhân hoàn chỉnh).</li>
+            <li><strong>Cấu tạo cơ bản</strong>: Đều gồm màng sinh chất, chất tế bào (tế bào chất), nhân tế bào và các bào quan phổ biến như ti thể, lưới nội chất, bộ máy Golgi, ribosome.</li>
+            <li><strong>Hoạt động sống</strong>: Đều thực hiện các chức năng sống cơ bản như hô hấp hiếu khí, trao đổi chất, sinh trưởng và phân chia tế bào.</li>
+          </ul>
+          <h3 contenteditable="false">Điểm khác nhau</h3>
+          <div class="table-wrap">
+            <table contenteditable="false">
+              <thead>
+                <tr>
+                  <th>Đặc điểm</th>
+                  <th>Tế bào thực vật</th>
+                  <th>Tế bào động vật</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Kích thước và hình dạng</td><td>Thường lớn hơn, có hình dạng cố định (hình chữ nhật hoặc hình khối).</td><td>Thường nhỏ hơn, hình dạng không cố định (linh hoạt).</td></tr>
+                <tr><td>Thành tế bào (vách tế bào)</td><td><strong>Có</strong> thành tế bào cấu tạo từ xenlulozo giúp bảo vệ và tạo hình dáng cứng chắc.</td><td><strong>Không có</strong> thành tế bào.</td></tr>
+                <tr><td>Lục lạp</td><td><strong>Có</strong> (chứa chất diệp lục giúp thực vật quang hợp tự dưỡng).</td><td><strong>Không có</strong> (sinh vật dị dưỡng).</td></tr>
+                <tr><td>Không bào</td><td>Thường có <strong>một không bào trung tâm kích thước lớn</strong>.</td><td>Không có hoặc chỉ có <strong>nhiều không bào nhỏ</strong>.</td></tr>
+                <tr><td>Trung tử (Trung thể)</td><td>Thường <strong>không có</strong> (trừ một số thực vật bậc thấp).</td><td><strong>Có</strong> trung tử tham gia vào quá trình phân chia tế bào.</td></tr>
+                <tr><td>Lysosome</td><td>Hiếm gặp hoặc ít rõ rệt (được thay thế bằng các chức năng của không bào).</td><td><strong>Có</strong> chứa các enzyme tiêu hóa.</td></tr>
+                <tr><td>Chất dự trữ</td><td>Tinh bột và dầu.</td><td>Glicogen và mỡ.</td></tr>
+                <tr><td>Cách phân chia tế bào</td><td>Hình thành <strong>vách ngăn</strong> ở giữa khi phân chia.</td><td>Phân chia bằng cách <strong>eo thắt</strong> màng sinh chất.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- DETAIL VIEW -->
+    <section id="detail" class="view">
+      <button class="back-btn" onclick="showHome()" title="Quay lại">‹</button>
+      <div class="detail-content" id="detailContent">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Trang học liệu Tế bào nhân thực · Có thể chỉnh sửa trực tiếp bằng nút Edit · Host trên GitHub Pages để có link công khai</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
